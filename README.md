@@ -17,10 +17,10 @@ Tahapan kerja yang dilakukan dalam identifikasi tepi Sungai Jambo Aye sebagai be
 5. Melakukan pengeditan _post-processing _ di perangkat lunak GIS, seperti QGIS.
 
 ## Disclaimer
-Script yang digunakan pada penelitian ini diambil dan dimodifikasi dari beberapa penelitian untuk disesuaikan dengan karakteristik wilayah studi. 
+Script yang digunakan pada penelitian ini diambil dan dimodifikasi dari beberapa penelitian untuk menyesuaikan karakteristik geografis serta ketersediaan data di wilayah studi. 
 
 ## Referensi
-Eramudadi, D., & Rokhmana, C. A. (2024). Ekstraksi Permukiman dari Kombinasi Citra Sentinel-2 dan Sentinel-1 dengan Pendekatan Object-Based Image Analysis [Postgraduate Thesis, Universitas Gadjah Mada]. https://doi.org/10.22146/jgise.91380
+Eramudadi, D., & Rokhmana, C. A. (2024). Ekstraksi Permukiman dari Kombinasi Citra Sentinel-2 dan Sentinel-1 dengan Pendekatan Object-Based Image Analysis [Postgraduate Thesis, Universitas Gadjah Mada]. https://etd.repository.ugm.ac.id/penelitian/detail/235502
 
 Mullissa, A., dkk (2021). Sentinel-1 SAR Backscatter Analysis Ready Data Preparation in Google Earth Engine. Remote Sensing, 13(10), 1954. https://doi.org/10.3390/rs13101954
 
