@@ -4,7 +4,7 @@
 > Dosen Pembimbing : Annisa Farida Hayuningsih, S.T., M.Eng., Ph.D  
 > Instansi : Universitas Gadjah Mada
 
-Banjir Galodo yang melanda Provinsi Aceh pada November 2025 memicu perubahan morfologi pada Sungai Jambo Aye akibat dinamika erosi, transportasi, dan sedimentasi material. Asumsi tersebut didukung dengan temuan kayu gelondongan di sepanjang aliran sungai. Penelitian ini memanfaatkan pendekatan multitemporal dengan mengintegrasikan keunggulan citra Sentinel-1 (SAR) dan Sentinel-2 (Optis) untuk mendeteksi serta mengidentifikasi perubahan garis tepi sungai secara presisi.
+Banjir Galodo yang melanda Provinsi Aceh pada November 2025 memicu perubahan morfologi pada Sungai Jambo Aye akibat dinamika erosi, transportasi, dan sedimentasi. Asumsi tersebut didukung dengan temuan kayu gelondongan di sepanjang aliran sungai. Penelitian ini memanfaatkan pendekatan multitemporal dengan mengintegrasikan keunggulan citra Sentinel-1 (SAR) dan Sentinel-2 (Optis) untuk mendeteksi serta mengidentifikasi perubahan garis tepi sungai secara presisi.
 
 Repositori ini memuat kumpulan *_script_* Google Earth Engine (GEE) yang digunakan dalam pemrosesan data, mulai dari klasifikasi badan air hingga ekstraksi badan sungai sebelum dan sesudah kejadian banjir.
 
