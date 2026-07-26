@@ -1,3 +1,10 @@
+/* Import merupakan bagian dari code editor GEE untuk memasukkan data dari Assets maupun sumber lainnya.
+Data sampel disimpan secara terpisah berdasarkan kelas nonAir dan air.
+Area penelitian atau region of interest disimpan dalam variabel ROI.
+dataset1 merupakan dataset yang diperoleh dari file pengunduhan data.
+centerlineRBI merupakan file centerline yang digunakan sebagai referensi dalam ekstraksi badan sungai.
+*/
+
 Imports (5 entries)
 var nonAir : FeatureCollection (316 elements)
 var air : FeatureCollection (230 elements)
@@ -130,6 +137,21 @@ var classified = dataset2.classify(classifier);
 Map.addLayer(classified,
   {min:0, max:1, palette:['yellow','blue']},
   'Hasil Klasifikasi Air-nonAir pascabanjir');
+
+// Nilai penting fitur  
+var importance = ee.Dictionary(classifier.explain().get('importance'));
+
+var total = ee.Number(
+  importance.values().reduce(ee.Reducer.sum())
+);
+
+var importancePercent = importance.map(function(key, value) {
+  return ee.Number(value)
+    .divide(total)
+    .multiply(100);
+});
+
+print('Feature Importance (%)', importancePercent);
 
 /* =================================================================
                         UJI PERFORMA MODEL
