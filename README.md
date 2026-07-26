@@ -12,8 +12,8 @@ Tahapan kerja yang dilakukan dalam identifikasi tepi Sungai Jambo Aye sebagai be
 1. Membuat batas area pengolahan yang kemudian disimpan dengan nama ROI (Region of Interest)
 2. Mengunduh data Sentinel-1 dan Sentinel-1 menggunakan _script_ pengunduhan_data.js
 3. Membuat sampel non-air dan air dengan kelas masing-masing 0 dan 1.
-4. Melakukan klasifikasi badan air menggunakan algoritma Random Forest menggunakan file klasifikasi_prabanjir.js untuk periode sebelum banjir dan klasifikasi_pascabanjir.js untuk periode setelah banjir.
-5. Melakukan ekstraksi badan sungai menggunakan fungsi CumulativeCoset() pada  file klasifikasi_prabanjir.js untuk periode sebelum banjir dan klasifikasi_pascabanjir.js untuk periode setelah banjir.
+4. Melakukan klasifikasi badan air menggunakan algoritma Random Forest menggunakan file klasifikasi_SebelumBanjir.js untuk periode sebelum banjir dan klasifikasi_SetelahBanjir.js untuk periode setelah banjir.
+5. Melakukan ekstraksi badan sungai menggunakan fungsi CumulativeCoset() pada  file klasifikasi_SebelumBanjir.js untuk periode sebelum banjir dan klasifikasi_SetelahBanjir.js untuk periode setelah banjir.
 6. Melakukan pengeditan _post-processing _ di perangkat lunak GIS, seperti QGIS.
 
 ## Disclaimer
