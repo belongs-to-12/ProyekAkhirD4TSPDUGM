@@ -1,3 +1,10 @@
+/* Import merupakan bagian dari code editor GEE untuk memasukkan data dari Assets maupun sumber lainnya.
+Data sampel disimpan secara terpisah berdasarkan kelas nonAir dan air.
+Area penelitian atau region of interest disimpan dalam variabel ROI.
+dataset1 merupakan dataset yang diperoleh dari file pengunduhan data.
+centerlineRBI merupakan file centerline yang digunakan sebagai referensi dalam ekstraksi badan sungai.
+*/
+
 Imports (5 entries)
 var nonAir : FeatureCollection (316 elements)
 var air : FeatureCollection (230 elements)
@@ -132,7 +139,22 @@ var classified = dataset1.select(bands).classify(classifier);
 // Menampilkan hasil klasifikasi
 Map.addLayer(classified,
   {min:0, max:1, palette:['yellow','blue']},
-  'Hasil Klasifikasi Air-nonAir prabanjir');
+  'Hasil Klasifikasi Air-nonAir Sebelum Banjir');
+
+// Nilai penting fitur  
+var importance = ee.Dictionary(classifier.explain().get('importance'));
+
+var total = ee.Number(
+  importance.values().reduce(ee.Reducer.sum())
+);
+
+var importancePercent = importance.map(function(key, value) {
+  return ee.Number(value)
+    .divide(total)
+    .multiply(100);
+});
+
+print('Feature Importance (%)', importancePercent);
 
 /* =================================================================
                          UJI PERFORMA MODEL
@@ -275,9 +297,9 @@ channelmask.reproject({
 // Menyimpan hasil klasifikasi ke Google Drive 
 Export.image.toDrive({
   image: classified,
-  description: 'Hasil_Klasifikasi_Prabanjir',
+  description: 'Hasil_Klasifikasi_SebelumBanjir',
   folder: 'Bahan_Proyek_Akhir',
-  fileNamePrefix: 'Hasil_Klasifikasi_Prabanjir',
+  fileNamePrefix: 'Hasil_Klasifikasi_SebelumBanjir',
   region: ROI,
   crs: 'EPSG:4326',
   scale: 10,
@@ -287,9 +309,9 @@ Export.image.toDrive({
 // Menyimpan hasil ekstraksi badan sungai ke Google Drive
 Export.image.toDrive({
   image: channelmask,
-  description: 'Badan_Sungai_Prabanjir',
+  description: 'Badan_Sungai_SebelumBanjir',
   folder: 'Bahan_Proyek_Akhir',
-  fileNamePrefix: 'Badan_Sungai_Prabanjir',
+  fileNamePrefix: 'Badan_Sungai_SebelumBanjir',
   region: ROI,
   crs: 'EPSG:4326',
   scale: 10,
