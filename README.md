@@ -13,13 +13,15 @@ Tahapan kerja yang dilakukan dalam identifikasi tepi Sungai Jambo Aye sebagai be
 2. Mengunduh data Sentinel-1 dan Sentinel-1 menggunakan _script_ pengunduhan_data.js
 3. Membuat sampel non-air dan air dengan kelas masing-masing 0 dan 1.
 4. Melakukan klasifikasi badan air menggunakan algoritma Random Forest menggunakan file klasifikasi_SebelumBanjir.js untuk periode sebelum banjir dan klasifikasi_SetelahBanjir.js untuk periode setelah banjir.
-5. Melakukan ekstraksi badan sungai menggunakan fungsi CumulativeCoset() pada  file klasifikasi_SebelumBanjir.js untuk periode sebelum banjir dan klasifikasi_SetelahBanjir.js untuk periode setelah banjir.
+5. Melakukan ekstraksi badan sungai menggunakan fungsi CumulativeCost() pada  file klasifikasi_SebelumBanjir.js untuk periode sebelum banjir dan klasifikasi_SetelahBanjir.js untuk periode setelah banjir.
 6. Melakukan pengeditan _post-processing _ di perangkat lunak GIS, seperti QGIS.
 
 ## Disclaimer
 Script yang digunakan pada penelitian ini diambil dan dimodifikasi dari beberapa penelitian untuk menyesuaikan karakteristik geografis serta ketersediaan data di wilayah studi. 
 
 ## Referensi
+Cardille, J. A., Crowley, M. A., Saah, D., & Clinton, N. E. (Ed.). (2024). Cloud-Based Remote Sensing with Google Earth Engine: Fundamentals and Applications. Springer International Publishing. https://doi.org/10.1007/978-3-031-26588-4
+
 Eramudadi, D., & Rokhmana, C. A. (2024). Ekstraksi Permukiman dari Kombinasi Citra Sentinel-2 dan Sentinel-1 dengan Pendekatan Object-Based Image Analysis [Postgraduate Thesis, Universitas Gadjah Mada]. https://etd.repository.ugm.ac.id/penelitian/detail/235502
 
 Mullissa, A., dkk (2021). Sentinel-1 SAR Backscatter Analysis Ready Data Preparation in Google Earth Engine. Remote Sensing, 13(10), 1954. https://doi.org/10.3390/rs13101954
